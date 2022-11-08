@@ -85,3 +85,15 @@ void aumentarVetor3(int *x, int &tamanho) {
     x = aux;
     tamanho = ceil(tamanho * 1.5);
 }
+
+//base para os exercicios
+
+void redimensionarCapacidade() {
+    nomeStruct *aux = new nomeStruct[capacidadeMaxima + 2];
+    for(int i = 0; i < capacidadeMaxima; i++){
+        aux[i] = listaDeAlgo[i];
+    }
+    delete [] listaDeAlgo;
+    listaDe = aux;
+    capacidadeMaxima += 2;
+}
